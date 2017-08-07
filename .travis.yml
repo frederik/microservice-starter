@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "8"
 before_script:
-  - "scripts/build.sh"
+  - ./scripts/build.sh
 script:
-  - "scripts/test.sh"
+  - ./scripts/test.sh

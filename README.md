@@ -2,6 +2,8 @@
 
 Opinitionated server infrastructure using TypeScript and Docker
 
+[![Build Status](https://travis-ci.org/frederik/microservice-starter.svg?branch=master)](https://travis-ci.org/frederik/microservice-starter)
+
 ## Requirements
 
  * Node 6/8
