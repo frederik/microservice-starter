@@ -1,5 +1,7 @@
 # Microservices
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/frederik/microservice-starter.svg)](https://greenkeeper.io/)
+
 Opinitionated server infrastructure using TypeScript and Docker
 
 [![Build Status](https://travis-ci.org/frederik/microservice-starter.svg?branch=master)](https://travis-ci.org/frederik/microservice-starter)
