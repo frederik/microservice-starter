@@ -1,0 +1,27 @@
+version: "3.2"
+
+services:
+  print:
+    # image: add your registry here
+    build: ./server/print
+    ports:
+      - "8000:8000"
+  web:
+    # image: add your registry here
+    build: ./server/web
+    ports:
+      - "80:80"
+    depends_on:
+      - print
+    links:
+      - print
+    # volumes:
+    # we'll be mounting our app directory so code changes
+    # are reflected within the container
+    #  - ./server/web:/usr/src/app
+  portainer:
+    image: portainer/portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

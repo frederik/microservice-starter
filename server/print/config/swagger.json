@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Template based PDF API",
+    "version": "0.0.1",
+    "title": "Publisher"
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json",
+    "multipart/form-data",
+    "text/html",
+    "text/css"
+  ],
+  "produces": [
+    "application/json",
+    "application/pdf",
+    "text/html",
+    "text/css"
+  ],
+  "paths": {
+    "/api/publish/demo": {
+      "get": {
+        "description": "Demo",
+        "operationId": "demo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "x-swagger-router-controller": "demo"
+    },
+    "/api/publish/testpage.html": {
+      "get": {
+        "description": "Renders a testpage as as HTML output",
+        "operationId": "html",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "x-swagger-router-controller": "print"
+    },
+    "/api/publish/testpage.pdf": {
+      "get": {
+        "description": "Renders a testpage as as PDF output",
+        "operationId": "pdf",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "x-swagger-router-controller": "print"
+    },
+    "/swagger": {
+      "x-swagger-pipe": "swagger_raw"
+    }
+  },
+  "securityDefinitions": {
+    "jwt_token": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "ErrorResponse": {
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "build": "npm run lint && rimraf dist && tsc",
+    "watch": "rimraf dist && tsc --watch",
+    "lint": "tslint -c ../../tslint.json src/**/*.ts"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.1",
+    "@types/express": "^4.0.36",
+    "@types/helmet": "^0.0.36",
+    "@types/request": "^2.0.0",
+    "@types/swagger-express-mw": "^0.7.1",
+    "@types/winston": "^2.3.4",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "helmet": "^3.8.1",
+    "injection-js": "^2.1.0",
+    "reflect-metadata": "^0.1.10",
+    "request": "^2.81.0",
+    "swagger": "^0.7.5",
+    "swagger-express-mw": "^0.7.0",
+    "swagger-ui-express": "^2.0.4",
+    "typescript": "^2.4.2",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "tslint": "^5.5.0"
+  }
+}

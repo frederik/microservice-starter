@@ -1,0 +1,38 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Web Server",
+    "version": "0.0.1",
+    "title": "Web"
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json",
+    "multipart/form-data",
+    "text/html",
+    "text/css"
+  ],
+  "produces": [
+    "application/json",
+    "application/pdf",
+    "text/html",
+    "text/css"
+  ],
+  "paths": {
+    "/swagger": {
+      "x-swagger-pipe": "swagger_raw"
+    }
+  },
+  "securityDefinitions": {
+    "jwt_token": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}

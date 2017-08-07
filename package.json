@@ -1,0 +1,10 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2"
+  }
+}

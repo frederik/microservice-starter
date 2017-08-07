@@ -1,0 +1,54 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "protocol": "inspector",
+      "request": "launch",
+      "name": "Launch Print Server",
+      "program": "${workspaceRoot}/server/print/server.js",
+      "cwd": "${workspaceRoot}/server/print",
+      // "envFile": "${workspaceRoot}/.env",
+      "env": {
+        "PORT": "5051",
+        "DEBUG": "express:*"
+      },
+      "sourceMaps": true,
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "protocol": "inspector",
+      "request": "launch",
+      "name": "Launch Web Server",
+      "program": "${workspaceRoot}/server/web/server.js",
+      "cwd": "${workspaceRoot}/server/web",
+      // "envFile": "${workspaceRoot}/.env",
+      "env": {
+        "PORT": "5050",
+        "DEBUG": "express:*"
+      },
+      "sourceMaps": true,
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "protocol": "inspector",
+      "request": "launch",
+      "name": "Debug Print Tests",
+      "program": "${workspaceRoot}/server/print/node_modules/mocha/bin/_mocha",
+      "stopOnEntry": false,
+      "args": [
+        "--require",
+        "ts-node/register",
+        "${workspaceRoot}/server/print/src/**/*.spec.ts"
+      ],
+      "cwd": "${workspaceRoot}/shared",
+      "sourceMaps": true,
+      "console": "integratedTerminal"
+    }
+  ]
+}
